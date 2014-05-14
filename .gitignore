@@ -1,3 +1,4 @@
 # Ignore database connection. May contain security information
 connect_db.php
 .idea
+phpinfo.php
