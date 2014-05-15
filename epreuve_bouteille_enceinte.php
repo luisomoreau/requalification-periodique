@@ -314,7 +314,7 @@
 <input type="text" name="numcertif" class="input-medium" required="required">
 
 <p><strong>Dernier numero de certificat :
-        <?php $dernnumcertif = $bdd->query("SELECT MAX(NumCertificat) AS numcertifmax FROM certificatgaz");
+        <?php $dernnumcertif = $bdd->query("SELECT MAX(CONVERT((NumCertificat),UNSIGNED)) AS numcertifmax FROM certificatgaz");
         while ($donneesdernnumcertif = $dernnumcertif->fetch()) {
             ?>
             &nbsp;<?php echo $donneesdernnumcertif['numcertifmax'];

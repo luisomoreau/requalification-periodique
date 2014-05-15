@@ -24,19 +24,19 @@
                 <div class="navbar-content">
                     <ul class="nav">
                         <li>
-                            <a href="Accueil.php">Accueil</a>
+                            <a href="accueil.php">Accueil</a>
                         </li>
                         <li>
-                            <a href="Nouvelle_Epreuve.php">Nouvelle Epreuve</a>
+                            <a href="nouvelle_epreuve.php">Nouvelle Epreuve</a>
                         </li>
                         <li>
-                            <a href="Modifier.php">Modifier Certificat</a>
+                            <a href="modifier.php">Modifier Certificat</a>
                         </li>
                         <li>
-                            <a href="Rechercher.php">Rechercher</a>
+                            <a href="rechercher.php">Rechercher</a>
                         </li>
                         <li class="active">
-                            <a href="Back_Office.php">Back Office</a>
+                            <a href="back_office.php">Back Office</a>
                         </li>
                     </ul>
                 </div>
