@@ -771,7 +771,7 @@ $donneesobs20a = $obs20a->fetch();
 <span class="help-inline">Numéro de certificat :<br></span>
 <input type="text" name="numcertif" class="input-medium" value="<?php echo $numcertifm; ?>">
 
-<p><strong>Dernier numero de certificat :
+<p><strong>Dernier numero de certificat : E
         <?php $dernnumcertif = $bdd->query("SELECT MAX(CONVERT((NumCertificat),UNSIGNED)) AS numcertifmax FROM certificat");
         while ($donneesdernnumcertif = $dernnumcertif->fetch()) {
             ?>

@@ -310,7 +310,7 @@
     </tr>
     </tbody>
 </table>
-<span class="help-inline">Numéro de certificat :<br></span>
+<span class="help-inline">Numéro de certificat : B<br></span>
 <input type="text" name="numcertif" class="input-medium" required="required">
 
 <p><strong>Dernier numero de certificat :

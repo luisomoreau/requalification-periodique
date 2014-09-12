@@ -14,3 +14,11 @@ SELECT CodeBouteille,
 FROM certificatgaz
 GROUP BY CodeBouteille
 ORDER BY stat DESC;
+
+/* Enlever le B des certificats gaz */
+UPDATE certificatgaz
+   SET NumCertificat = REPLACE(Numcertificat,'B','');
+
+/* Changer la colonne numcertif en int  */
+ALTER TABLE certificatgaz CHANGE NumCertificat NumCertificat INT;
+

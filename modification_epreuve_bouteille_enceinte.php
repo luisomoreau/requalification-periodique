@@ -468,10 +468,10 @@
     </tr>
     </tbody>
 </table>
-<span class="help-inline">Numéro de certificat :<br></span>
+<span class="help-inline">Numéro de certificat : B<br></span>
 <input type="text" name="numcertif" class="input-medium" value="<?php echo $numcertifm; ?>">
 
-<p><strong>Dernier numero de certificat :
+<p><strong>Dernier numero de certificat : B
         <?php $dernnumcertif = $bdd->query("SELECT MAX(CONVERT((NumCertificat),UNSIGNED)) AS numcertifmax FROM certificatgaz");
         while ($donneesdernnumcertif = $dernnumcertif->fetch()) {
             ?>

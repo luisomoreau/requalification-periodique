@@ -116,9 +116,53 @@
                     )) or die(mysql_error()); ?>
                     La marque commerciale et le numéro de certification ont bien été ajouté <?php } ?>
             </form>
+            <p>Rechercher les informations d'une bouteille :</p>
+            <form action="back_office.php" method="post">
+                <select name="codebouteille" required="required">
+                    <?php
+                    $codebouteille = $bdd->query('SELECT CodeBouteille FROM bouteille');
+                    while ($donneescodebouteille = $codebouteille->fetch()) {
+                        ?>
+                        <option
+                            value="<?php echo $donneescodebouteille['CodeBouteille']; ?>"><?php echo $donneescodebouteille['CodeBouteille']; ?></option>
+                    <?php } ?>
+                </select>
+                <input type="submit" class="btn btn-success">
+                <?php
+                if(isset($_POST['codebouteille'])){
+                $codebouteille = $_POST['codebouteille'];
+                $queryinfobouteille = $bdd->query("SELECT * FROM bouteille WHERE CodeBouteille='$codebouteille';");
+                while ($infobouteille = $queryinfobouteille->fetch()) {
+                    ?>
+                <table class="table table-condensed table-striped table-bordered">
+                    <tr>
+                        <td>Code Bouteille</td>
+                        <td>Fournisseur</td>
+                        <td>Gaz</td>
+                        <td>Volume</td>
+                        <td>Matière</td>
+                        <td>Filetage</td>
+                        <td>Longueur</td>
+                        <td>Epaisseur</td>
+                        <td>Diamètre</td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $infobouteille['CodeBouteille']; ?></td>
+                        <td><?php echo $infobouteille['Fournisseur']; ?></td>
+                        <td>C02</td>
+                        <td><?php echo $infobouteille['Volume']; ?></td>
+                        <td><?php echo $infobouteille['Matiere']; ?></td>
+                        <td><?php echo $infobouteille['Filetage']; ?></td>
+                        <td><?php echo $infobouteille['Longueur']; ?></td>
+                        <td><?php echo $infobouteille['Epaisseur']; ?></td>
+                        <td><?php echo $infobouteille['Diametre']; ?></td>
+                    </tr>
+                    </table>
+                <?php }} ?>
+            </form>
         </div>
         <div class="well">
-            <h5>Enceinte Gaz</h5>
+            <h5>Enceinte Gaz / Bouteille transportable</h5>
 
             <form action="back_office.php" method="post">
                 <span class="help-inline">Ajouter un client Enceinte de gaz : </span>
@@ -164,5 +208,94 @@
                     L'enceinte de gaz a bien été ajouté !
                 <?php } ?>
             </form>
+            <p>Rechercher les informations d'une bouteille :</p>
+            <form action="back_office.php" method="post">
+                <select name="codebouteille" required="required">
+                    <?php
+                    $codebouteillegaz = $bdd->query('SELECT idEnceinte FROM enceintegaz');
+                    while ($donneescodebouteillegaz = $codebouteillegaz->fetch()) {
+                        ?>
+                        <option
+                            value="<?php echo $donneescodebouteillegaz['idEnceinte']; ?>"><?php echo $donneescodebouteillegaz['idEnceinte']; ?></option>
+                    <?php } ?>
+                </select>
+                <input type="submit" class="btn btn-success">
+                <?php
+                if(isset($_POST['codebouteille'])){
+                    $codebouteillegaz = $_POST['codebouteille'];
+                    $queryinfobouteillegaz = $bdd->query("SELECT * FROM enceintegaz WHERE idEnceinte='$codebouteille';");
+                    while ($infobouteillegaz = $queryinfobouteillegaz->fetch()) {
+                        ?>
+                        <table class="table table-condensed table-striped table-bordered">
+                            <tr>
+                                <td>Code Bouteille</td>
+                                <td>Fournisseur</td>
+                                <td>Gaz</td>
+                                <td>Volume</td>
+                                <td>Matière</td>
+                                <td>Pression d'épreuve</td>
+                                <td>Longueur</td>
+                                <td>Diamètre</td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $infobouteillegaz['idEnceinte']; ?></td>
+                                <td><?php echo $infobouteillegaz['Fournisseur']; ?></td>
+                                <td><?php echo $infobouteillegaz['Gaz']; ?></td>
+                                <td><?php echo $infobouteillegaz['Volume']; ?></td>
+                                <td><?php echo $infobouteillegaz['Matiere']; ?></td>
+                                <td><?php echo $infobouteillegaz['PressionEpreuve']; ?></td>
+                                <td><?php echo $infobouteillegaz['Longueur']; ?></td>
+                                <td><?php echo $infobouteillegaz['Diametre']; ?></td>
+                            </tr>
+                        </table>
+                    <?php }} ?>
+            </form>
+        </div>
+
+
+
+        <div class="well">
+            <h5>Statistiques</h5>
+            <p>Type d'extincteurs les plus passés en requalification :</p>
+            <table class="table table-condensed table-striped table-bordered">
+                <tr>
+                    <td>Code Bouteille</td>
+                    <td>Nombre de passage en épreuve</td>
+                </tr>
+                <?php
+                $querystat1 = $bdd->query('SELECT CodeBouteille,
+                                        COUNT(NumCertificat) AS stat
+                                        FROM certificat
+                                        GROUP BY CodeBouteille
+                                        ORDER BY stat DESC;');
+                while ($stat1 = $querystat1->fetch()) {
+                ?>
+                <tr>
+                    <td><?php echo $stat1['CodeBouteille']; ?></td>
+                    <td><?php echo $stat1['stat']; ?> </td>
+                </tr>
+                <?php } ?>
+            </table>
+            <br>
+            <p>Type de bouteille les plus passés en requalification :</p>
+            <table class="table table-condensed table-striped table-bordered">
+                <tr>
+                    <td>Code Bouteille</td>
+                    <td>Nombre de passage en épreuve</td>
+                </tr>
+                <?php
+                $querystat1 = $bdd->query('SELECT CodeBouteille,
+                                        COUNT(NumCertificat) AS stat
+                                        FROM certificatgaz
+                                        GROUP BY CodeBouteille
+                                        ORDER BY stat DESC;');
+                while ($stat1 = $querystat1->fetch()) {
+                    ?>
+                    <tr>
+                        <td><?php echo $stat1['CodeBouteille']; ?></td>
+                        <td><?php echo $stat1['stat']; ?> </td>
+                    </tr>
+                <?php } ?>
+            </table>
         </div>
     </div>

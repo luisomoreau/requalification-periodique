@@ -561,7 +561,7 @@ function int2str($a)
         requalification périodique.</p>
 
     <div class="well">
-        <p>N° de certificat : <?php echo $_POST['numcertif']; ?></p>
+        <p>N° de certificat : B<?php echo $_POST['numcertif']; ?></p>
 
         <p>Fait à Saint-Léger du Bourg Denis</p>
 

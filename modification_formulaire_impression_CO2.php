@@ -724,7 +724,7 @@ function int2str($a)
 </div>
 <div class="span11">
     <div class="well">
-        <p>N° de certificat : <?php echo $_POST['numcertif']; ?></p>
+        <p>N° de certificat : E<?php echo $_POST['numcertif']; ?></p>
 
         <p>Fait à Saint-Léger du Bourg Denis<br>
             Le <?php echo date("d/m/y", strtotime($dateenr)); ?></p>
