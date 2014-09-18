@@ -70,6 +70,10 @@
         </div>
     </div>
 </div>
+
+<footer class="modal-footer navbar-fixed-bottom">
+    La Sécurité Incendie, tous droits réservés, développé par Louis Moreau
+</footer>
 </body>
 
 </html>

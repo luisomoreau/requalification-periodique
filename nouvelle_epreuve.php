@@ -13,7 +13,7 @@
 
 <body>
 <div class="container">
-    <div class="navbar">
+    <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
                 <a class="brand" href="#">LSI</a>
@@ -41,9 +41,12 @@
         </div>
     </div>
     <div class="container">
+        <br>
+        <h2>Nouvelle Epreuve</h2>
         <h4>Type de bouteille</h4>
-        <a class="btn btn-danger btn-large" href="Epreuve_Extincteur_CO2.php">Extincteur CO2 <a/>
-            <a class="btn btn-warning btn-large" href="Epreuve_Bouteille_Enceinte.php">Bouteille ou Enceinte</a>
+            <a class="btn btn-danger btn-large" href="epreuve_extincteur_co2.php">Extincteur CO2 <a/>
+            <a class="btn btn-warning btn-large" href="epreuve_bouteille_enceinte.php">Bouteille ou Enceinte</a>
+            <a class="btn btn-success btn-large" href="epreuve_bouteille_transportable.php">Bouteille transportable</a>
     </div>
 </div>
 </body>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Nouvelle Epreuve Air</title>
+    <title>Nouvelle Epreuve Transportable</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -48,8 +48,8 @@
     <h2>Nouvelle Epreuve</h2>
     <h4>Type de bouteille</h4>
         <a class="btn btn-large" href="epreuve_extincteur_co2.php">Extincteur CO2 <a/>
-        <a class="btn btn-warning btn-large" href="epreuve_bouteille_enceinte.php">Bouteille ou Enceinte</a>
-        <a class="btn btn-large" href="epreuve_bouteille_transportable.php">Bouteille Transportable</a>
+        <a class="btn btn-large" href="epreuve_bouteille_enceinte.php">Bouteille ou Enceinte</a>
+        <a class="btn  btn-success btn-large" href="epreuve_bouteille_transportable.php">Bouteille Transportable</a>
 </div>
 <br>
 
@@ -116,7 +116,7 @@
 <a class="btn pull-right btn-primary" data-toggle="modal" href="#codebouteille">Rechercher Code Bouteille</a>
 <br>
 
-<form action="formulaire_impression_enceintegaz.php" method="post">
+<form action="formulaire_impression_enceinte_transportable.php" method="post">
 <div class="well">
 <input type="text" class="input-medium" name="nomsign" required="required" placeholder="Nom">
 <span class="help-inline">Nom du signataire</span>
@@ -313,11 +313,11 @@
     </tr>
     </tbody>
 </table>
-<span class="help-inline">Numéro de certificat : B<br></span>
+<span class="help-inline">Numéro de certificat : BT<br></span>
 <input type="text" name="numcertif" class="input-medium" required="required">
 
-<p><strong>Dernier numero de certificat :
-        <?php $dernnumcertif = $bdd->query("SELECT MAX(CONVERT((NumCertificat),UNSIGNED)) AS numcertifmax FROM certificatgaz");
+<p><strong>Dernier numero de certificat :BT
+        <?php $dernnumcertif = $bdd->query("SELECT MAX(CONVERT((NumCertificat),UNSIGNED)) AS numcertifmax FROM certificattransportable");
         while ($donneesdernnumcertif = $dernnumcertif->fetch()) {
             ?>
             &nbsp;<?php echo $donneesdernnumcertif['numcertifmax'];

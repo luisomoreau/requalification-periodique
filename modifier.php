@@ -13,7 +13,7 @@
 
 <body>
 <div class="container">
-    <div class="navbar">
+    <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
                 <a class="brand" href="#">LSI</a>
@@ -21,42 +21,64 @@
                 <div class="navbar-content">
                     <ul class="nav">
                         <li>
-                            <a href="Accueil.php">Accueil</a>
+                            <a href="accueil.php">Accueil</a>
                         </li>
                         <li>
-                            <a href="Nouvelle_Epreuve.php">Nouvelle Epreuve</a>
+                            <a href="nouvelle_epreuve.php">Nouvelle Epreuve</a>
                         </li>
                         <li class="active">
-                            <a href="Modifier.php">Modifier Certificat</a>
+                            <a href="modifier.php">Modifier Certificat</a>
                         </li>
                         <li>
-                            <a href="Rechercher.php">Rechercher</a>
+                            <a href="rechercher.php">Rechercher</a>
                         </li>
                         <li>
-                            <a href="Back_Office.php">Back Office</a>
+                            <a href="back_office.php">Back Office</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <h1>Modifier un certificat</h1>
-
-    <form action="modification_epreuve_extincteur_co2.php" method="post">
-        <div class="well">
-            <span class="help-block">Extincteur CO2</span>
-            <input type="text" class="input-medium" name="numcertifm" placeholder="Numéro de certificat">
-        </div>
-        <input type="submit" class="btn btn-success">
-    </form>
-    <form action="modification_epreuve_bouteille_enceinte.php" method="post">
-        <div class="well">
-            <span class="help-block">Bouteille ou enceinte de Gaz</span>
-            <input type="text" class="input-medium" name="numcertifm" placeholder="Numéro de certificat">
-        </div>
-        <input type="submit" class="btn btn-success">
-    </form>
+    <br>
+    <h2>Modifier un certificat</h2>
+    <div class="row">
+    <div class="span4">
+        <form action="modification_epreuve_extincteur_co2.php" method="post">
+            <div class="well">
+                <span class="help-block">Extincteur CO2</span>
+                <p>E
+                <input type="text" class="input-medium" name="numcertifm" placeholder="Numéro de certificat"></p>
+                <br>
+                <input type="submit" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+    <div class="span4">
+        <form action="modification_epreuve_bouteille_enceinte.php" method="post">
+            <div class="well">
+                <span class="help-block">Bouteille ou enceinte de Gaz</span>
+                <p>B
+                <input type="text" class="input-medium" name="numcertifm" placeholder="Numéro de certificat"></p>
+                <br>
+                <input type="submit" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+    <div class="span4">
+        <form action="modification_epreuve_bouteille_transportable.php" method="post">
+            <div class="well">
+                <span class="help-block">Bouteille Transportable</span>
+                <p>BT
+                <input type="text" class="input-medium" name="numcertifm" placeholder="Numéro de certificat"></p>
+                <br>
+                <input type="submit" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+    </div>
 </div>
+
 </body>
 
 </html>

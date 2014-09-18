@@ -16,7 +16,7 @@
 
 <body>
 <div class="container">
-    <div class="navbar">
+    <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
                 <a class="brand" href="#">LSI</a>

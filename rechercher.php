@@ -16,7 +16,7 @@
 
 <body>
 <div class="container">
-    <div class="navbar">
+    <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
                 <a class="brand" href="#">LSI</a>
@@ -43,7 +43,8 @@
             </div>
         </div>
     </div>
-    <h1>Rechercher dans la base de données</h1>
+    <br>
+    <h2>Rechercher dans la base de données</h2>
 
     <div class="well">
         <form action="rechercher.php" method="post">

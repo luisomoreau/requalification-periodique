@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Modification Epreuve Gaz</title>
+    <title>Modification Epreuve Transportable</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -18,112 +18,112 @@
         $numcertifm = $_POST['numcertifm'];
     }
     //définition des variables
-    $codebouteillea = $bdd->query("SELECT CodeBouteille FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $codebouteillea = $bdd->query("SELECT CodeBouteille FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneescodebouteillea = $codebouteillea->fetch();
 
-    $nomsigna = $bdd->query("SELECT NomSign FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $nomsigna = $bdd->query("SELECT NomSign FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnomsigna = $nomsigna->fetch();
 
-    $dateenra = $bdd->query("SELECT DateEnr FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $dateenra = $bdd->query("SELECT DateEnr FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdateenra = $dateenra->fetch();
 
-    $dateepra = $bdd->query("SELECT DateEpr FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $dateepra = $bdd->query("SELECT DateEpr FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdateepra = $dateepra->fetch();
 
-    $clienta = $bdd->query("SELECT NomClientGaz FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $clienta = $bdd->query("SELECT NomClientTransportable FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesclienta = $clienta->fetch();
 
-    $pressionServicea = $bdd->query("SELECT pressionService FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $pressionServicea = $bdd->query("SELECT pressionService FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneespressionServicea = $pressionServicea->fetch();
 
-    $numenceinte1a = $bdd->query("SELECT numEnceinte1 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte1a = $bdd->query("SELECT numEnceinte1 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte1a = $numenceinte1a->fetch();
-    $datepremepr1a = $bdd->query("SELECT anneePremEpr1 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr1a = $bdd->query("SELECT anneePremEpr1 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr1a = $datepremepr1a->fetch();
-    $datedernepr1a = $bdd->query("SELECT dateDernEpr1 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr1a = $bdd->query("SELECT dateDernEpr1 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr1a = $datedernepr1a->fetch();
-    $obs1a = $bdd->query("SELECT obs1 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs1a = $bdd->query("SELECT obs1 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs1a = $obs1a->fetch();
 
-    $numenceinte2a = $bdd->query("SELECT numEnceinte2 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte2a = $bdd->query("SELECT numEnceinte2 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte2a = $numenceinte2a->fetch();
-    $datepremepr2a = $bdd->query("SELECT anneePremEpr2 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr2a = $bdd->query("SELECT anneePremEpr2 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr2a = $datepremepr2a->fetch();
-    $datedernepr2a = $bdd->query("SELECT dateDernEpr2 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr2a = $bdd->query("SELECT dateDernEpr2 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr2a = $datedernepr2a->fetch();
-    $obs2a = $bdd->query("SELECT obs2 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs2a = $bdd->query("SELECT obs2 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs2a = $obs2a->fetch();
 
-    $numenceinte3a = $bdd->query("SELECT numEnceinte3 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte3a = $bdd->query("SELECT numEnceinte3 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte3a = $numenceinte3a->fetch();
-    $datepremepr3a = $bdd->query("SELECT anneePremEpr3 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr3a = $bdd->query("SELECT anneePremEpr3 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr3a = $datepremepr3a->fetch();
-    $datedernepr3a = $bdd->query("SELECT dateDernEpr3 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr3a = $bdd->query("SELECT dateDernEpr3 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr3a = $datedernepr3a->fetch();
-    $obs3a = $bdd->query("SELECT obs3 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs3a = $bdd->query("SELECT obs3 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs3a = $obs3a->fetch();
 
-    $numenceinte4a = $bdd->query("SELECT numEnceinte4 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte4a = $bdd->query("SELECT numEnceinte4 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte4a = $numenceinte4a->fetch();
-    $datepremepr4a = $bdd->query("SELECT anneePremEpr4 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr4a = $bdd->query("SELECT anneePremEpr4 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr4a = $datepremepr4a->fetch();
-    $datedernepr4a = $bdd->query("SELECT dateDernEpr4 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr4a = $bdd->query("SELECT dateDernEpr4 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr4a = $datedernepr4a->fetch();
-    $obs4a = $bdd->query("SELECT obs4 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs4a = $bdd->query("SELECT obs4 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs4a = $obs4a->fetch();
 
-    $numenceinte5a = $bdd->query("SELECT numEnceinte5 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte5a = $bdd->query("SELECT numEnceinte5 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte5a = $numenceinte5a->fetch();
-    $datepremepr5a = $bdd->query("SELECT anneePremEpr5 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr5a = $bdd->query("SELECT anneePremEpr5 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr5a = $datepremepr5a->fetch();
-    $datedernepr5a = $bdd->query("SELECT dateDernEpr5 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr5a = $bdd->query("SELECT dateDernEpr5 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr5a = $datedernepr5a->fetch();
-    $obs5a = $bdd->query("SELECT obs5 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs5a = $bdd->query("SELECT obs5 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs5a = $obs5a->fetch();
 
-    $numenceinte6a = $bdd->query("SELECT numEnceinte6 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte6a = $bdd->query("SELECT numEnceinte6 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte6a = $numenceinte6a->fetch();
-    $datepremepr6a = $bdd->query("SELECT anneePremEpr6 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr6a = $bdd->query("SELECT anneePremEpr6 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr6a = $datepremepr6a->fetch();
-    $datedernepr6a = $bdd->query("SELECT dateDernEpr6 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr6a = $bdd->query("SELECT dateDernEpr6 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr6a = $datedernepr6a->fetch();
-    $obs6a = $bdd->query("SELECT obs6 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs6a = $bdd->query("SELECT obs6 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs6a = $obs6a->fetch();
 
-    $numenceinte7a = $bdd->query("SELECT numEnceinte7 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte7a = $bdd->query("SELECT numEnceinte7 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte7a = $numenceinte7a->fetch();
-    $datepremepr7a = $bdd->query("SELECT anneePremEpr7 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr7a = $bdd->query("SELECT anneePremEpr7 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr7a = $datepremepr7a->fetch();
-    $datedernepr7a = $bdd->query("SELECT dateDernEpr7 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr7a = $bdd->query("SELECT dateDernEpr7 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr7a = $datedernepr7a->fetch();
-    $obs7a = $bdd->query("SELECT obs7 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs7a = $bdd->query("SELECT obs7 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs7a = $obs7a->fetch();
 
-    $numenceinte8a = $bdd->query("SELECT numEnceinte8 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte8a = $bdd->query("SELECT numEnceinte8 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte8a = $numenceinte8a->fetch();
-    $datepremepr8a = $bdd->query("SELECT anneePremEpr8 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr8a = $bdd->query("SELECT anneePremEpr8 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr8a = $datepremepr8a->fetch();
-    $datedernepr8a = $bdd->query("SELECT dateDernEpr8 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr8a = $bdd->query("SELECT dateDernEpr8 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr8a = $datedernepr8a->fetch();
-    $obs8a = $bdd->query("SELECT obs8 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs8a = $bdd->query("SELECT obs8 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs8a = $obs8a->fetch();
 
-    $numenceinte9a = $bdd->query("SELECT numEnceinte9 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte9a = $bdd->query("SELECT numEnceinte9 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte9a = $numenceinte9a->fetch();
-    $datepremepr9a = $bdd->query("SELECT anneePremEpr9 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr9a = $bdd->query("SELECT anneePremEpr9 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr9a = $datepremepr9a->fetch();
-    $datedernepr9a = $bdd->query("SELECT dateDernEpr9 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr9a = $bdd->query("SELECT dateDernEpr9 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr9a = $datedernepr9a->fetch();
-    $obs9a = $bdd->query("SELECT obs9 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs9a = $bdd->query("SELECT obs9 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs9a = $obs9a->fetch();
 
-    $numenceinte10a = $bdd->query("SELECT numEnceinte10 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $numenceinte10a = $bdd->query("SELECT numEnceinte10 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesnumenceinte10a = $numenceinte10a->fetch();
-    $datepremepr10a = $bdd->query("SELECT anneePremEpr10 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datepremepr10a = $bdd->query("SELECT anneePremEpr10 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatepremepr10a = $datepremepr10a->fetch();
-    $datedernepr10a = $bdd->query("SELECT dateDernEpr10 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $datedernepr10a = $bdd->query("SELECT dateDernEpr10 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesdatedernepr10a = $datedernepr10a->fetch();
-    $obs10a = $bdd->query("SELECT obs10 FROM certificatgaz WHERE NumCertificat ='$numcertifm'");
+    $obs10a = $bdd->query("SELECT obs10 FROM certificattransportable WHERE NumCertificat ='$numcertifm'");
     $donneesobs10a = $obs10a->fetch();
 
     ?>
@@ -224,7 +224,7 @@
 <a class="btn pull-right btn-primary" data-toggle="modal" href="#codebouteille">Rechercher Code Bouteille</a>
 <br>
 
-<form action="modification_formulaire_impression_bouteille_enceinte.php" method="post">
+<form action="modification_formulaire_impression_bouteille_transportable.php" method="post">
 <div class="well">
 <input type="text" class="input-medium" name="nomsign" value="<?php echo $donneesnomsigna['NomSign']; ?>"
        placeholder="Nom">
@@ -246,8 +246,8 @@
         ?>
         <option value="<?php echo $donneesclient['nomclient']; ?>"><?php echo $donneesclient['nomclient']; ?></option>
     <?php } ?>
-    <option value="<?php echo $donneesclienta['NomClientGaz']; ?>"
-            selected="selected"><?php echo $donneesclienta['NomClientGaz']; ?></option>
+    <option value="<?php echo $donneesclienta['NomClientTransportable']; ?>"
+            selected="selected"><?php echo $donneesclienta['NomClientTransportable']; ?></option>
 </select>
 <span class="help-inline">Code Bouteille&nbsp;</span>
 <select name="codebouteille">
@@ -468,11 +468,11 @@
     </tr>
     </tbody>
 </table>
-<span class="help-inline">Numéro de certificat : B<br></span>
+<span class="help-inline">Numéro de certificat : BT<br></span>
 <input type="text" name="numcertif" class="input-medium" value="<?php echo $numcertifm; ?>">
 
-<p><strong>Dernier numero de certificat : B
-        <?php $dernnumcertif = $bdd->query("SELECT MAX(CONVERT((NumCertificat),UNSIGNED)) AS numcertifmax FROM certificatgaz");
+<p><strong>Dernier numero de certificat : BT
+        <?php $dernnumcertif = $bdd->query("SELECT MAX(CONVERT((NumCertificat),UNSIGNED)) AS numcertifmax FROM certificattransportable");
         while ($donneesdernnumcertif = $dernnumcertif->fetch()) {
             ?>
             &nbsp;<?php echo $donneesdernnumcertif['numcertifmax'];
