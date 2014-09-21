@@ -43,7 +43,17 @@
             </div>
         </div>
     </div>
-    <div class="span12">
+    <br>
+    <?php
+    /*
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#extincteur">Extincteur</a></li>
+        <li><a href="#gaz">Enceinte gaz / Bouteille transportable</a></li>
+        <li><a href="#stats">Statistiques</a></li>
+    </ul>
+    */ ?>
+
+    <div id="extincteur" class="span12">
         <div class="well">
             <h5>Extincteur CO2</h5>
 
@@ -161,7 +171,9 @@
                 <?php }} ?>
             </form>
         </div>
-        <div class="well">
+
+
+        <div id="gaz" class="well">
             <h5>Enceinte Gaz / Bouteille transportable</h5>
 
             <form action="back_office.php" method="post">
@@ -254,7 +266,7 @@
 
 
 
-        <div class="well">
+        <div id="stats" class="well">
             <h5>Statistiques</h5>
             <p>Type d'extincteurs les plus passés en requalification :</p>
             <table class="table table-condensed table-striped table-bordered">

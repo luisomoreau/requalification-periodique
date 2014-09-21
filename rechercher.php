@@ -88,7 +88,7 @@
             ?>
         </p>
 
-        <p> Certificats Bouteille ou Enceinte de gaz :<?php if (isset($_POST['dateepr'])) {
+        <p> Certificats Enceinte de gaz ou Bouteille Transportable :<?php if (isset($_POST['dateepr'])) {
                 $dateepr = $_POST['dateepr'];
                 $numcertifgaz2 = $bdd->query("SELECT NumCertificat FROM certificatgaz WHERE DateEpr ='$dateepr'");
                 while ($donneesnumcertifgaz2 = $numcertifgaz2->fetch()) {
