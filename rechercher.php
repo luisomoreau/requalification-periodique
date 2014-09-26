@@ -71,6 +71,16 @@
             }
             ?>
         </p>
+
+        <p> Bouteille transportable :<?php if (isset($_POST['dateenr'])) {
+                $dateenr = $_POST['dateenr'];
+                $numcertiftp = $bdd->query("SELECT NumCertificat FROM certificattransportable WHERE DateEnr ='$dateenr'");
+                while ($donneesnumcertiftp = $numcertiftp->fetch()) {
+                    ?>&nbsp;<?php echo $donneesnumcertiftp['NumCertificat'];
+                }
+            }
+            ?>
+        </p>
     </div>
     <div class="well">
         <form action="rechercher.php" method="post">
@@ -88,11 +98,21 @@
             ?>
         </p>
 
-        <p> Certificats Enceinte de gaz ou Bouteille Transportable :<?php if (isset($_POST['dateepr'])) {
+        <p> Certificats Enceinte de gaz :<?php if (isset($_POST['dateepr'])) {
                 $dateepr = $_POST['dateepr'];
                 $numcertifgaz2 = $bdd->query("SELECT NumCertificat FROM certificatgaz WHERE DateEpr ='$dateepr'");
                 while ($donneesnumcertifgaz2 = $numcertifgaz2->fetch()) {
                     ?>&nbsp;<?php echo $donneesnumcertifgaz2['NumCertificat'];
+                }
+            }
+            ?>
+        </p>
+
+        <p> Bouteille Transportable :<?php if (isset($_POST['dateepr'])) {
+                $dateepr = $_POST['dateepr'];
+                $numcertiftp2 = $bdd->query("SELECT NumCertificat FROM certificattransportable WHERE DateEpr ='$dateepr'");
+                while ($donneesnumcertiftp2 = $numcertiftp2->fetch()) {
+                    ?>&nbsp;<?php echo $donneesnumcertiftp2['NumCertificat'];
                 }
             }
             ?>
@@ -138,11 +158,11 @@
         </p>
 
         <form action="rechercher.php" method="post">
-            <span class="help-inline"><strong>Bouteille ou Enceinte de gaz &nbsp; </strong></span>
+            <span class="help-inline"><strong>Enceinte de gaz &nbsp; </strong></span>
             <input type="text" name="numbouteille" class="input-medium">
             <input type="submit" class="btn btn-success">
         </form>
-        <p> Certificats Bouteille ou Enceinte de gaz :<?php if (isset($_POST['numbouteille'])) {
+        <p> Certificats Enceinte de Gaz :<?php if (isset($_POST['numbouteille'])) {
                 $numbouteille = $_POST['numbouteille'];
                 $numcertifgaz3 = $bdd->query("SELECT NumCertificat FROM certificatgaz WHERE
 																															numEnceinte1 ='$numbouteille' OR 
@@ -158,6 +178,32 @@
 																															");
                 while ($donneesnumcertifgaz3 = $numcertifgaz3->fetch()) {
                     ?>&nbsp;<?php echo $donneesnumcertifgaz3['NumCertificat'];
+                }
+            }
+            ?>
+        </p>
+
+        <form action="rechercher.php" method="post">
+            <span class="help-inline"><strong>Bouteille Transportable &nbsp; </strong></span>
+            <input type="text" name="numbouteille" class="input-medium">
+            <input type="submit" class="btn btn-success">
+        </form>
+        <p> Certificats Bouteille Transportable :<?php if (isset($_POST['numbouteille'])) {
+                $numbouteille = $_POST['numbouteille'];
+                $numcertiftp3 = $bdd->query("SELECT NumCertificat FROM certificattransportable WHERE
+																															numEnceinte1 ='$numbouteille' OR
+																															numEnceinte2 ='$numbouteille' OR
+																															numEnceinte3 ='$numbouteille' OR
+																															numEnceinte4 ='$numbouteille' OR
+																															numEnceinte5 ='$numbouteille' OR
+																															numEnceinte6 ='$numbouteille' OR
+																															numEnceinte7 ='$numbouteille' OR
+																															numEnceinte8 ='$numbouteille' OR
+																															numEnceinte9 ='$numbouteille' OR
+																															numEnceinte10 ='$numbouteille'
+																															");
+                while ($donneesnumcertiftp3 = $numcertiftp3->fetch()) {
+                    ?>&nbsp;<?php echo $donneesnumcertiftp3['NumCertificat'];
                 }
             }
             ?>
