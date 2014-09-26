@@ -43,10 +43,9 @@
             </div>
         </div>
     </div>
+    <br>
     <div class="container">
-        <h4>Type de bouteille</h4>
-        <a class="btn btn-danger btn-large" href="Epreuve_Extincteur_CO2.php">Extincteur CO2 <a/>
-            <a class="btn btn-large" href="Epreuve_Bouteille_Enceinte.php">Bouteille ou Enceinte</a>
+        <h3>Extincteur CO2</h3>
     </div>
     <div class="well">
         <?php

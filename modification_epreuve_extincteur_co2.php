@@ -768,7 +768,7 @@ $donneesobs20a = $obs20a->fetch();
 </tr>
 </tbody>
 </table>
-<span class="help-inline">Numéro de certificat :<br></span>
+<span class="help-inline">Numéro de certificat : E<br></span>
 <input type="text" name="numcertif" class="input-medium" value="<?php echo $numcertifm; ?>">
 
 <p><strong>Dernier numero de certificat : E
