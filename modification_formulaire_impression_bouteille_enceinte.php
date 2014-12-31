@@ -274,7 +274,7 @@ function int2str($a)
 <div class="row">
     <h4>
         <center>
-            ARRETE DU 15 MARS 2000<br>
+            ARRETE DU 15 MARS 2000 MODIFIE<br>
             CERTIFICAT D'INSPECTION DE REQUALIFICATION PERIODIQUE<br>
             D'EQUIPEMENT SOUS PRESSION DE GAZ
         </center>

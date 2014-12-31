@@ -388,7 +388,7 @@ function int2str($a)
         </center>
     </h5>
     <p>
-    <center>ARRETE du 15 mars 2000</center>
+    <center>ARRETE du 15 mars 2000 modifié</center>
     </p>
     <p>
         &nbsp;&nbsp;&nbsp;Je sousigné M. <?php echo $_POST['nomsign']; ?>, responsable, certifie que :<br>
@@ -401,7 +401,7 @@ function int2str($a)
         (robinet - tromblon) différents de ceux dont ils étaient équipés avant la requalification périodique,
         mais d'origine, adapté et contrôlés par le constructeur, pour l'équipement du type d'extincteur avec lequel ils
         sont remis en conformité.<br>
-        - Que les équipements constituant le lot présenté à la requalification périodique (voir table ci-après) ont été
+        - Que les équipements constituant le lot présenté à la requalification périodique (voir tableau ci-après) ont été
         identifiés dans le repertoire
         des extincteurs portatifs au dioxyde de carbone sous les références suivantes :
     </p>
